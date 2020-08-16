@@ -18,20 +18,19 @@ const Archive = (props) => {
   } = props
 
   return (
-    <Layout
-      bodyClass="home blog wp-embed-responsive has-no-pagination showing-comments hide-avatars footer-top-visible customize-support">
-      <Seo title="Home" description="Welcome to the Twenty Nineteen Theme." />
+    <Layout bodyClass="home blog wp-embed-responsive has-no-pagination showing-comments hide-avatars footer-top-visible customize-support">
+      <Seo title="Home" description="Welcome to the Twenty Twenty Theme." />
 
       {nodes &&
-      nodes.map((post, index) => {
-        return (
-          <PostPreview
-            key={index}
-            post={post}
-            isLast={index === nodes.length - 1}
-          />
-        )
-      })}
+        nodes.map((post, index) => {
+          return (
+            <PostPreview
+              key={index}
+              post={post}
+              isLast={index === nodes.length - 1}
+            />
+          )
+        })}
 
       <ArchivePagination {...pageInfo} archivePath={archivePath} />
     </Layout>
@@ -49,8 +48,7 @@ export const query = graphql`
       limit: $perPage
       skip: $offset
       filter: {
-        author: {
-          node: { databaseId: { eq: $userDatabaseId } }}
+        author: { node: { databaseId: { eq: $userDatabaseId } } }
         categories: {
           nodes: { elemMatch: { databaseId: { eq: $categoryDatabaseId } } }
         }
