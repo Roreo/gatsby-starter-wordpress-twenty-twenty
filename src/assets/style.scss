@@ -1475,7 +1475,7 @@ ul.social-icons li {
 .toggle-inner {
   display: flex;
   justify-content: center;
-  height: 2.3rem;
+  height: 4rem;
   position: relative;
 }
 
@@ -5803,6 +5803,7 @@ a.to-the-top > * {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+    flex-flow: column;
   }
 
   .header-toggles:only-child .toggle-inner .svg-icon {
@@ -5811,7 +5812,7 @@ a.to-the-top > * {
 
   .header-toggles:only-child .toggle-inner .toggle-text {
     position: static;
-    padding-right: 20px;
+    padding-right: 0px;
     font-size: 15px;
     color: inherit;
   }
